@@ -1,0 +1,13 @@
+<h1>Edit a Video</h1>
+    <form method="POST" action="/videos/{{videoDetails._id}}/update">
+      <label for="title">Title:</label>
+      <input id = "title" type="text" name="title" value="{{videoDetails.title}}"/>
+      {{#if error}}
+        <p class="error">{{error}}</p>
+      {{/if}}
+      <label for="url">URL:</label>
+      <input id = "url" type="text" name="url" value="{{videoDetails.url}}"/>
+      <p>Description:</p>
+      <textarea id = "description" name="description">{{videoDetails.description}}</textarea>
+      <input type="submit" id='submit-edit'/>
+    </form>
